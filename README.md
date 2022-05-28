@@ -1,2 +1,2 @@
 # JavascriptRefresher
-สำหรับผู้เริ่มต้น - HTML Javascript Tailwindcss
+สำหรับผู้เริ่มต้น - HTML CSS(Tailwindcss) และ Javascript 
