@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรไฟล์</title>
+    <link href="https://fonts.googleapis.com/css2?family=Freehand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="shortcut icon" href="" type="image/x-icon"> 
+</head>
+<body class="bg-gradient-color">
+    <div class="flex items-center " style="height: 100vh;">
+        <div class="card rounded-md mx-12 lg:mx-auto my-auto w-full  2xl:p-0 h-auto" >
+            <div class="w-full h-full bg-white shadow-2xl ">
+                <div class="sm:flex p-4 sm:px-8 sm:pt-8 flex flex-col">
+                    <div class="p-4 w-1/2 flex">
+                        <label class="flex-none my-auto"  >Title Filter : </label>
+                        <input type="text" id="inpFilter"class="ml-4 border border-gray-400 px-2 py-1 w-full font-thin " placeholder="Input text filter" onkeyup="onFilters(this)">
+                    </div>
+                    <div class="p-4">
+                        <div class="table-head p-4 flex bg-gray-700">
+                            <div class="table-head-col text-white w-16">Id</div>
+                            <div class="table-head-col text-white w-2/4 pr-2">Title</div>
+                            <div class="table-head-col text-white w-full">Content</div>
+                        </div>
+                        <div class="table-body p-4 border-b-2 border-gray-700">
+                            
+                        </div>
+                        <div class="table-footer p-4 text-right">Total Content Amount : <span class="totalAmount">100</span></div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>
+

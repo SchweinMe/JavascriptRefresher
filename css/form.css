@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+ 
+}
+.form-control {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.form-control input {
+    border: 1px solid #334155;
+    border-radius: 2px;    
+    background: none;
+    padding: 3px;
+}
+.form-control textarea {
+    border: 1px solid #334155;
+    border-radius: 2px;  
+    background: none;
+    padding: 3px;  
+}
+section {
+    background-color: #ffffffba;
+}
+
+fieldset {
+    border: 1px solid #334155;
+    padding-left: 1rem;
+}
+
+.image-bg {
+    background-image: url('https://picsum.photos/1900/900');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.image-preview {
+    width: 5rem;
+    overflow: hidden;
+    height: 5rem;
+    border-radius: 5rem;
+}
+#imageProfilePreview {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* ในส่วนนี้จะให้นักศึกษาทำการ validation input */
+
+.form-control.error input, 
+.form-control.error textarea {
+    border: 2px solid red;
+}
+.form-control .error-input  {
+    display: none;
+}
+.form-control.error  .error-input  {
+    display: block;
+}
