@@ -8,34 +8,46 @@ if(telNumber) {
     })
 }
 
-const onUpdateData = async (e) => {
-    let params = {
+const onSubmitData = async (e) => {
+    let isFiltered = true;
+    let _data = {
         image: document.querySelector('.inp-image'),
         jobTitle: document.querySelector('.inp-job-title'),
         jobPosition: document.querySelector('.inp-position-title'),
         jobDescription: document.querySelector('.inp-description-title'),
     }
 
-    let inp = document.querySelectorAll('.form-control.required') 
-    for(let el of inp){
-        el.classList.add('error')
+    if(_data.jobTitle.value != "") {
+        isFiltered = false;
+        _data.jobTitle.classList.add('error')
+    } else {
+        _data.jobTitle.classList.remove('error')
     }
-    
-    Swal.fire({
-        title: 'Are you sure?',
-        text: "You want to update your infomation!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#2dd4bf',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, update it!'
-      }).then( (result) => {
+
+    if(_data.jobPosition.value.length > 0) {
+        isFiltered = false;
+        _data.jobPosition.classList.add('error')
+    } else {
+        _data.jobPosition.classList.remove('error')
+    }
+
+    if(isFiltered){
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You want to update your infomation!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#2dd4bf',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, update it!'
+        }).then( (result) => {
             if (!result.isConfirmed) {
                 location.reload()
             }
-      })
-
-    // let data = await fetchDataUpdate(params)
+        })
+    }
+    
+   
 }
 
 
@@ -52,8 +64,7 @@ const OnUploadImageProfile = (e) => {
     let file = e.files;
     let preview = document.querySelector("#imageProfilePreview")
     if(file.length > 0) {
-      preview.src = URL.createObjectURL(file[0]);  
-        // document.querySelector('.mock-image').classList.remove('hidden')
+        preview.src = URL.createObjectURL(file[0]);  
     }
 }
 
