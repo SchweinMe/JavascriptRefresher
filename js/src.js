@@ -41,8 +41,33 @@ if(domE) {
     
 }
 
-/* Loop */
+/* FOR Loop */
+let len = [1,2,3,4,5,6]
+for(let i = 0 ; i < len.length ; i++){
+    console.log(len[i])
+}
+ 
+/* FOR IN */
+let objectList = {name: "paul", tel: '0123', age: 20}
+for(let key in objectList) { 
+    console.log(key + " => " + objectList[key])
+}
 
+/* FOR OF */
+let objectArrayList = [{no: 1, name: 'a', tel:"01"},{no: 2, name: 'b', tel:"02"},{no: 1, name: 'c', tel:"03"}]
+for(let item of objectArrayList) {
+    console.log(item.name + " : " + item.tel)
+}
+
+/* Map data เก็บค่าทุกรอบถ้าไม่ return จะมีค่า = null */
+const mapedData = objectArrayList.map( item => {
+    return item
+})
+
+/* Filter Data จะย้อนค่ากลับไปเก็บต่อเมื่อ เงื่อนไขเป็นจริง */
+const filteredData = objectArrayList.filter( item => {
+    return item.no > 1
+})
 
 /* Switch Case */
 let value = 1;

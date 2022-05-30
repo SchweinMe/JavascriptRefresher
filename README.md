@@ -7,7 +7,7 @@ https://adminlte.io/themes/v3/index.html#
 # Declaration
 การประกาศตัวแปร
 - Const , Let , Var 
-- String, Nummeric, Boolean
+- String, Nummeric, Boolean, null = ค่าว่างหรือไม่มีค่า , undefined ไม่สามารถระบุค่าได้
 - console.log() ใช้ในการปัญหา , เช็คข้อมูล
 - Array คืออะไร? [1,2,3,4]
 - Object คืออะไร? {type:"Fiat", model:"500", color:"white"}
@@ -27,7 +27,7 @@ https://adminlte.io/themes/v3/index.html#
     For-In
     Map
     Filter
-- switch Case
+- switch Case ใช้งานคู่กับ function
 
 - การเข้าถึง DOM 
     getElementById , getElementByClassName  
